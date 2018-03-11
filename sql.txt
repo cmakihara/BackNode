@@ -1,0 +1,44 @@
+create table contato(
+	id_contato serial not null,
+    nome varchar(255),
+    telefone varchar(15),
+    endereco varchar(255),
+    email varchar(255),
+    celular varchar(15) ,
+	primary key(id_contato)  
+);
+create table produto(
+    id serial not null,
+    nome varchar(100),
+    tipo varchar(255),
+    valor varchar(100),
+    quantidade integer,
+    seila varchar(100)
+    );
+
+create table usuario(
+    id serial not null,
+    nome varchar(255),
+    telefone varchar(15),
+    endereco varchar(255),
+    email varchar(255),
+    tipoUser varchar(15),
+    senha varchar(15)	 	
+
+);
+
+create table pedido (
+	id serial not null,
+	qtd_produto integer,
+	valor_total varchar(100),
+	contato_id_contato integer,
+	usuario_id_usuario integer 
+
+);
+
+
+ select * from produto
+    
+    drop table produto
+    drop table contato
+    drop table usuario	
