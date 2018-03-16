@@ -4,7 +4,7 @@ var db_config = {
     port: 5432,
     db: 'agenda',
     user: 'postgres',
-    password: 'sa'
+    password: 'univel'
   },
   server: {
     port: '8000'
