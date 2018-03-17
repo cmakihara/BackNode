@@ -1,19 +1,31 @@
 create table contato(
 	id_contato serial not null,
-    nome varchar(255),
-    telefone varchar(15),
-    endereco varchar(255),
-    email varchar(255),
-    celular varchar(15) ,
+      razao_social varchar(100),
+      nome_fantasia varchar(100),
+      cnpj varchar(100),
+      telefone varchar(100),
+      nome_dono varchar(100),
+      nome_compra varchar(100),
+      local_entrega varchar(100),
+      rua varchar(100),
+      numero varchar(100),
+      bairro varchar(100),
+      cep varchar(100),
+      complemento varchar(100),
+      observacao varchar(100),
+
 	primary key(id_contato)  
 );
 create table produto(
     id serial not null,
-    nome varchar(100),
-    tipo varchar(255),
-    valor varchar(100),
-    quantidade integer,
-    seila varchar(100)
+    nomeproduto varchar(100),
+    descricao varchar(255),
+    medida varchar(100),
+    qtdminima integer,
+    valorminimo varchar(100),
+	valorvenda varchar(100),
+	codigobarra varchar(100),
+	categoria varchar(100),
     );
 
 create table usuario(

@@ -4,18 +4,21 @@ module.exports = function(app, pool) {
 
     pool.connect((err, client, release) => {
 
-      const nome = req.body.nome;
-      const tipo = req.body.tipo;
-      const valor = req.body.valor;
-      const quantidade = req.body.quantidade;
-      const seila = req.body.seila;
+      const nomeproduto = req.body.nomeproduto;
+      const descricao = req.body.descricao;
+      const medida = req.body.medida;
+      const qtdminima = req.body.qtdminima;
+      const valorminimo = req.body.valorminimo;
+	  const valorvenda = req.body.valorvenda;
+      const codigobarra = req.body.codigobarra;
+      const categoria = req.body.categoria;
 
       if (err) {
         res.status(500);
         return console.error('Erro na conexão.', err.stack);
       }
 
-      client.query("INSERT INTO produto(nome,tipo,valor,quantidade,seila) VALUES ($1,$2,$3,$4,$5)", [nome,tipo,valor,quantidade,seila], (err, item) => {
+      client.query("INSERT INTO produto(nomeproduto,descricao,medida,qtdminima,valorminimo,valorvenda,codigobarra,categoria) VALUES ($1,$2,$3,$4,$5,$6,$7,$8)", [nomeproduto,descricao,medida,qtdminima,valorminimo,valorvenda,codigobarra,categoria], (err, item) => {
 
         release();
 
@@ -40,11 +43,14 @@ module.exports = function(app, pool) {
 
     pool.connect((err, client, release) => {
 
-      const nome = req.body.nome;
-      const tipo = req.body.tipo;
-      const valor = req.body.valor;
-      const quantidade = req.body.quantidade;
-      const seila = req.body.seila;
+      const nomeproduto = req.body.nomeproduto;
+      const descricao = req.body.descricao;
+      const medida = req.body.medida;
+      const qtdminima = req.body.qtdminima;
+      const valorminimo = req.body.valorminimo;
+	  const valorvenda = req.body.valorvenda;
+      const codigobarra = req.body.codigobarra;
+      const categoria = req.body.categoria;
 
 
       if (err) {
@@ -79,11 +85,14 @@ module.exports = function(app, pool) {
 
     pool.connect((err, client, release) => {
 
-      const nome = req.body.nome;
-      const tipo = req.body.tipo;
-      const valor = req.body.valor;
-      const quantidade = req.body.quantidade;
-      const seila = req.body.seila;
+      const nomeproduto = req.body.nomeproduto;
+      const descricao = req.body.descricao;
+      const medida = req.body.medida;
+      const qtdminima = req.body.qtdminima;
+      const valorminimo = req.body.valorminimo;
+	  const valorvenda = req.body.valorvenda;
+      const codigobarra = req.body.codigobarra;
+      const categoria = req.body.categoria;
 
 
       if (err) {

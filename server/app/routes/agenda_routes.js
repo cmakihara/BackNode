@@ -1,21 +1,32 @@
+
 module.exports = function(app, pool) {
 
   app.post('/api/agenda', (req, res) => {
 
     pool.connect((err, client, release) => {
 
-      const nome = req.body.nome;
+      const razao_social = req.body.razao_social;
+      const nome_fantasia = req.body.nome_fantasia;
+      const cnpj = req.body.cnpj;
       const telefone = req.body.telefone;
-      const endereco = req.body.endereco;
-      const email = req.body.email;
-      const celular = req.body.celular;
+      const nome_dono = req.body.nome_dono;
+      const nome_compra = req.body.nome_compra;
+      const local_entrega = req.body.local_entrega;
+      const rua = req.body.rua;
+      const numero = req.body.numero;
+      const bairro = req.body.bairro;
+      const cep = req.body.cep;
+      const complemento = req.body.complemento;
+      const observacao = req.body.observacao;
+
+
 
       if (err) {
         res.status(500);
         return console.error('Erro na conexão.', err.stack);
       }
 
-      client.query("INSERT INTO contato(nome,telefone,endereco,email,celular) VALUES ($1,$2,$3,$4,$5)", [nome,telefone,endereco,email,celular], (err, item) => {
+      client.query("INSERT INTO contato(razao_social,nome_fantasia,cnpj,telefone,nome_dono,nome_compra,local_entrega,rua,numero,bairro,cep,complemento,observacao)VALUES ($1,$2,$3,$4,$5,$6,$7,$8,$9,$10,$11,$12,$13)", [razao_social,nome_fantasia,cnpj,telefone,nome_dono,nome_compra,local_entrega,rua,numero,bairro,cep,complemento,observacao], (err, item) => {
 
         release();
 
@@ -40,12 +51,19 @@ module.exports = function(app, pool) {
 
     pool.connect((err, client, release) => {
 
-      const nome = req.body.nome;
+      const razao_social = req.body.razao_social;
+      const nome_fantasia = req.body.nome_fantasia;
+      const cnpj = req.body.cnpj;
       const telefone = req.body.telefone;
-      const endereco = req.body.endereco;
-      const email = req.body.email;
-      const celular = req.body.celular;
-
+      const nome_dono = req.body.nome_dono;
+      const nome_compra = req.body.nome_compra;
+      const local_entrega = req.body.local_entrega;
+      const rua = req.body.rua;
+      const numero = req.body.numero;
+      const bairro = req.body.bairro;
+      const cep = req.body.cep;
+      const complemento = req.body.complemento;
+      const observacao = req.body.observacao;
 
       if (err) {
         res.status(500);
@@ -79,11 +97,19 @@ module.exports = function(app, pool) {
 
     pool.connect((err, client, release) => {
 
-      const nome = req.body.nome;
+      const razao_social = req.body.razao_social;
+      const nome_fantasia = req.body.nome_fantasia;
+      const cnpj = req.body.cnpj;
       const telefone = req.body.telefone;
-      const endereco = req.body.endereco;
-      const email = req.body.email;
-      const celular = req.body.celular;
+      const nome_dono = req.body.nome_dono;
+      const nome_compra = req.body.nome_compra;
+      const local_entrega = req.body.local_entrega;
+      const rua = req.body.rua;
+      const numero = req.body.numero;
+      const bairro = req.body.bairro;
+      const cep = req.body.cep;
+      const complemento = req.body.complemento;
+      const observacao = req.body.observacao;
 
 
       if (err) {
@@ -116,11 +142,19 @@ module.exports = function(app, pool) {
 
     pool.connect((err, client, release) => {
 
-      const nome = req.body.nome;
+      const razao_social = req.body.razao_social;
+      const nome_fantasia = req.body.nome_fantasia;
+      const cnpj = req.body.cnpj;
       const telefone = req.body.telefone;
-      const endereco = req.body.endereco;
-      const email = req.body.email;
-      const celular = req.body.celular;
+      const nome_dono = req.body.nome_dono;
+      const nome_compra = req.body.nome_compra;
+      const local_entrega = req.body.local_entrega;
+      const rua = req.body.rua;
+      const numero = req.body.numero;
+      const bairro = req.body.bairro;
+      const cep = req.body.cep;
+      const complemento = req.body.complemento;
+      const observacao = req.body.observacao;
 
 
       if (err) {
